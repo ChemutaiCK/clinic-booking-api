@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: clinic-booking-api
+    runtime: docker
+    dockerfilePath: ./docker/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: LOG_JSON
+        value: "true"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: CORS_ALLOWED_ORIGINS
+        value: '["*"]'
+      - key: DATABASE_URL
+        fromDatabase:
+          name: clinic-booking-db
+          property: connectionString
+
+databases:
+  - name: clinic-booking-db
+    plan: free
+    databaseName: clinic_booking
+    user: clinic_booking_user

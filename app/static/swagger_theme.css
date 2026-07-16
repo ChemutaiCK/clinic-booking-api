@@ -1,0 +1,85 @@
+/*
+ * "Fresh Meadow" theme overrides for Swagger UI.
+ * Applied on top of the default Swagger UI stylesheet (imported below, since
+ * this file replaces the single stylesheet FastAPI's Swagger route loads).
+ */
+
+@import url("https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css");
+
+:root {
+  --fm-primary: #4CB04F;
+  --fm-secondary: #EBF9EE;
+  --fm-accent: #377D39;
+  --fm-surface: #F4FCF6;
+  --fm-header-text: #464646;
+}
+
+body {
+  background-color: var(--fm-surface) !important;
+}
+
+.swagger-ui .topbar {
+  background-color: var(--fm-accent) !important;
+  border-bottom: 3px solid var(--fm-primary);
+}
+
+.swagger-ui .info .title,
+.swagger-ui .info h1,
+.swagger-ui .info h2,
+.swagger-ui .info h3 {
+  color: var(--fm-header-text) !important;
+}
+
+.swagger-ui .scheme-container {
+  background-color: var(--fm-secondary) !important;
+  box-shadow: none;
+}
+
+.swagger-ui .opblock-tag {
+  color: var(--fm-header-text) !important;
+  border-bottom: 1px solid var(--fm-secondary);
+}
+
+.swagger-ui .opblock.opblock-post {
+  background: var(--fm-secondary) !important;
+  border-color: var(--fm-primary) !important;
+}
+
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+  background: var(--fm-primary) !important;
+}
+
+.swagger-ui .opblock.opblock-patch {
+  background: var(--fm-secondary) !important;
+  border-color: var(--fm-accent) !important;
+}
+
+.swagger-ui .opblock.opblock-patch .opblock-summary-method {
+  background: var(--fm-accent) !important;
+}
+
+.swagger-ui .opblock.opblock-get {
+  background: var(--fm-secondary) !important;
+  border-color: #2E7CD6 !important;
+}
+
+.swagger-ui .btn.execute {
+  background-color: var(--fm-primary) !important;
+  border-color: var(--fm-accent) !important;
+  color: #ffffff !important;
+}
+
+.swagger-ui .btn.authorize {
+  color: var(--fm-accent) !important;
+  border-color: var(--fm-accent) !important;
+}
+
+.swagger-ui select,
+.swagger-ui input[type=text] {
+  border-color: var(--fm-primary) !important;
+}
+
+.swagger-ui table thead tr th {
+  color: var(--fm-header-text) !important;
+  border-bottom: 2px solid var(--fm-primary) !important;
+}
