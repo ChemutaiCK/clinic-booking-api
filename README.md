@@ -579,7 +579,7 @@ production behavior, validated manually against the Docker Compose Postgres inst
 
 ## Deployment
 
-**Public URL:** `<fill in after deploying — see below>`
+**Public URL:** https://clinic-booking-api-mi0d.onrender.com
 
 Deployed on **Render**, defined as code in `render.yaml` (a Render Blueprint): a Docker
 web service plus a managed PostgreSQL instance, wired together via Render's
